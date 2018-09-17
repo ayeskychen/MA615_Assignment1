@@ -70,7 +70,7 @@ p2.table <- as.data.frame(p2.table)
 colnames(p2.table) <- c("n")
 cp <- prob[, 3]
 for (i in 1:50) {
-  fc <- pbinom(q = 0:50, size = 50, prob = cp[i])
+  fc <- pbinom(q = 0:50, size = 50, prob = cp[i]) #producing columns of P(T<=n) for each k value between 0 and 49
   fc <- as.data.frame(fc)
   colnames(fc) <- i - 1
   p2.table <- cbind(p2.table, fc)
