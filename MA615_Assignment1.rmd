@@ -1,7 +1,7 @@
 ---
 title: "MA615_Assignment1"
 author: "Sky Liu"
-date: "9/16/2018"
+date: "9/17/2018"
 output: pdf_document
 ---
 
@@ -25,7 +25,6 @@ Given the condition that a book has an average of 2 misprints on each page, the 
 
 Poisson$(\lambda = 2)$. 
 
-![](book.png)
 
 
 \vspace{.1in}
@@ -70,7 +69,8 @@ p2.table <- as.data.frame(p2.table)
 colnames(p2.table) <- c("n")
 cp <- prob[, 3]
 for (i in 1:50) {
-  fc <- pbinom(q = 0:50, size = 50, prob = cp[i]) #producing columns of P(T<=n) for each k value between 0 and 49
+  #producing columns of P(T<=n) for each k value between 0 and 49
+  fc <- pbinom(q = 0:50, size = 50, prob = cp[i]) 
   fc <- as.data.frame(fc)
   colnames(fc) <- i - 1
   p2.table <- cbind(p2.table, fc)
@@ -78,4 +78,5 @@ for (i in 1:50) {
 kable(p2.table)
 ```
 
+![](book.png)
 
