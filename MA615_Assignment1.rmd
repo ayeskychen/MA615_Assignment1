@@ -7,8 +7,10 @@ output: pdf_document
 ---
 
 
-![Book Prints Exercise](book.png){.callout}
 
+
+\centering
+![Book Prints Exercise](book.png){.callout}
 \raggedright
 \clearpage
 
